@@ -1,0 +1,48 @@
+\documentclass[10pt,twocolumn,letterpaper]{article}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{hyperref}
+\usepackage{breakurl}
+\usepackage{flushend}
+\usepackage[normalem]{ulem}
+\usepackage{textcomp}
+\usepackage{multirow}
+\usepackage{times}
+\usepackage{fullpage}
+\usepackage{epsfig}
+%\usepackage{endnote}
+
+\newcommand{\heresy}{Heresy}
+\newcommand{\todo}[1]{\textcolor{red} {TODO:{#1}} }
+
+\begin{document}
+\twocolumn[
+	\centerline{\Large \bf \heresy: Scalable Dissent}
+	\medskip
+	\centerline{\textit{Nicholas Merritt \hspace{0.2cm} Aastha Mehta (2546220)}}
+	\bigskip
+]
+
+\thispagestyle{empty}
+
+\begin{abstract}
+	\input{abstract}
+\end{abstract}
+
+\input{introduction}
+\input{dissent-overview}
+\input{design}
+\input{trust-model}
+\input{perf-analysis}
+%\input{security-analysis}
+%\input{evaluation}
+%\input{related}
+\input{conclusion}
+
+{\small \bibliographystyle{acm}
+\bibliography{heresy}}
+
+\end{document}
