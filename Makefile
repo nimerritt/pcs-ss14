@@ -26,3 +26,9 @@ final: $(TARGET).pdf
 	exiftool -all:all= $(TARGET).pdf
 	qpdf --linearize $(TARGET).pdf $(TARGET)-final.pdf
 
+FIGURES = throughput latency
+
+graphs: $(addprefix figures/, $(addsuffix .eps, $(FIGURES)))
+
+figures/%.eps: plots/%.plots data/%/summary.data
+	gnuplot $< > $@
